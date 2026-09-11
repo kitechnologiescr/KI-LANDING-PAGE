@@ -66,8 +66,8 @@ button, input, textarea { font: inherit; }
 .hero-orbit span { position: absolute; font-size: .64rem; letter-spacing: .16em; color: var(--cyan); }
 
 .ticker { border-block: 1px solid var(--line); overflow: hidden; background: rgba(255,255,255,.02); }
-.ticker-track { display: flex; width: max-content; gap: 54px; padding: 18px 0; animation: marquee 25s linear infinite; color: #aab6c7; text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; }
-.ticker-track span { display: flex; align-items: center; gap: 18px; }
+.ticker-track { display: flex; width: max-content; min-width: 200vw; justify-content: space-around; gap: 54px; padding: 18px 0; animation: marquee 25s linear infinite; color: #aab6c7; text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; }
+.ticker-track span { display: flex; flex: 0 0 auto; align-items: center; gap: 18px; }
 .ticker-track span::after { content: '✦'; color: var(--blue); }
 
 section { padding: 94px 0; scroll-margin-top: 92px; }
