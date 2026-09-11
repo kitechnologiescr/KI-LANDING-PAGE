@@ -31,7 +31,7 @@ button, input, textarea { font: inherit; }
 .site-header.scrolled { height: 76px; background: rgba(13,17,23,.9); border-bottom-color: var(--line); backdrop-filter: blur(18px); }
 .nav { height: 100%; display: flex; align-items: center; justify-content: space-between; }
 .brand { width: 170px; height: 84px; display: grid; place-items: center; overflow: hidden; flex: 0 0 auto; }
-.brand img { width: 150px; height: auto; }
+.brand img { width: 124px; height: auto; }
 .desktop-nav { display: flex; gap: 38px; align-items: center; color: #c8d1df; font-size: .92rem; }
 .desktop-nav a { position: relative; transition: color .2s; }
 .desktop-nav a::after { content: ''; position: absolute; left: 0; right: 100%; bottom: -7px; height: 1px; background: var(--cyan); transition: right .25s; }
@@ -58,9 +58,9 @@ button, input, textarea { font: inherit; }
 .hero-proof { display: flex; gap: 28px; margin-top: 50px; color: var(--muted); font-size: .82rem; }
 .hero-proof span { display: flex; align-items: center; gap: 8px; }
 .hero-proof i { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 16px var(--green); }
-.hero-visual { position: absolute; inset: -90px -22vw -90px 38%; z-index: -1; opacity: .78; mask-image: linear-gradient(to right, transparent 0, #000 24%, #000 76%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 15%, #000 82%, transparent 100%); }
-.hero-visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, var(--ink) 0%, rgba(13,17,23,.78) 20%, rgba(13,17,23,.18) 55%, rgba(13,17,23,.36) 100%); }
-.hero-artwork { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% center; transition: transform .7s cubic-bezier(.2,.8,.2,1); }
+.hero-visual { position: absolute; inset: -150px -25vw -150px 34%; z-index: -1; opacity: .78; -webkit-mask-image: radial-gradient(ellipse 78% 72% at 66% 50%, #000 42%, rgba(0,0,0,.92) 58%, transparent 88%); mask-image: radial-gradient(ellipse 78% 72% at 66% 50%, #000 42%, rgba(0,0,0,.92) 58%, transparent 88%); }
+.hero-visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, var(--ink) 0%, rgba(13,17,23,.8) 18%, rgba(13,17,23,.12) 56%, rgba(13,17,23,.3) 100%); }
+.hero-artwork { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% center; transform: scale(1.08); transition: transform .7s cubic-bezier(.2,.8,.2,1); }
 .hero-orbit { position: absolute; left: 18%; bottom: 14%; width: 142px; aspect-ratio: 1; border: 1px solid rgba(0,200,255,.34); border-radius: 50%; display: grid; place-items: center; backdrop-filter: blur(10px); background: rgba(4,15,29,.6); animation: float 5s ease-in-out infinite; z-index: 2; }
 .hero-orbit::before { content: ''; width: 72%; aspect-ratio: 1; border: 1px dashed rgba(255,255,255,.24); border-radius: 50%; animation: spin 14s linear infinite; }
 .hero-orbit span { position: absolute; font-size: .64rem; letter-spacing: .16em; color: var(--cyan); }
@@ -152,7 +152,7 @@ footer { padding: 38px 0; border-top: 1px solid var(--line); }
   .mobile-menu.open { transform: none; visibility: visible; }
   .hero { min-height: 760px; padding: 124px 0 72px; }
   .hero-copy { width: min(88%, 720px); }
-  .hero-visual { position: absolute; inset: -80px -34vw -80px 23%; min-height: 0; margin: 0; z-index: -1; opacity: .48; mask-image: linear-gradient(to right, transparent, #000 30%, #000 70%, transparent), linear-gradient(to bottom, transparent, #000 18%, #000 76%, transparent); }
+  .hero-visual { position: absolute; inset: -110px -42vw -110px 18%; min-height: 0; margin: 0; z-index: -1; opacity: .48; -webkit-mask-image: radial-gradient(ellipse 82% 70% at 66% 50%, #000 38%, rgba(0,0,0,.88) 57%, transparent 88%); mask-image: radial-gradient(ellipse 82% 70% at 66% 50%, #000 38%, rgba(0,0,0,.88) 57%, transparent 88%); }
   .hero-visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, var(--ink) 0%, rgba(13,17,23,.7) 30%, transparent 72%); }
   .hero-artwork { object-position: 62% center; }
   .hero-orbit { display: none; }
@@ -172,7 +172,7 @@ footer { padding: 38px 0; border-top: 1px solid var(--line); }
   .site-header { height: 82px; }
   .site-header.scrolled { height: 72px; }
   .brand { width: 138px; height: 76px; }
-  .brand img { width: 128px; }
+  .brand img { width: 106px; }
   .mobile-menu { inset-block-start: 82px; }
   .hero { min-height: 700px; padding-top: 112px; }
   .hero-copy { width: 100%; }

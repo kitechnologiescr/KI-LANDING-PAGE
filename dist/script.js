@@ -76,7 +76,7 @@ if (!reduceMotion && heroArtwork) {
   window.addEventListener('pointermove', (event) => {
     const x = (event.clientX / window.innerWidth - .5) * 10;
     const y = (event.clientY / window.innerHeight - .5) * 8;
-    heroArtwork.style.transform = `translate3d(${x}px, ${y}px, 0) scale(1.02)`;
+    heroArtwork.style.transform = `translate3d(${x}px, ${y}px, 0) scale(1.08)`;
   }, { passive: true });
 }
 
