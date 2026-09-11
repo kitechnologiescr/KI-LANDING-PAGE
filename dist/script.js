@@ -86,7 +86,7 @@ contactForm?.addEventListener('submit', (event) => {
   const data = new FormData(contactForm);
   const subject = encodeURIComponent(`Nuevo proyecto: ${data.get('company') || data.get('name')}`);
   const body = encodeURIComponent(`Nombre: ${data.get('name')}\nEmpresa: ${data.get('company')}\nCorreo: ${data.get('email')}\n\nProyecto:\n${data.get('message')}`);
-  window.location.href = `mailto:info@kitech.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:kitechnologiescr@gmail.com?subject=${subject}&body=${body}`;
 });
 
 $('#year').textContent = new Date().getFullYear();
