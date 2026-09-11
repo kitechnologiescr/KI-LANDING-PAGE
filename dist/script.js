@@ -90,4 +90,5 @@ contactForm?.addEventListener('submit', (event) => {
 });
 
 
-$('#year').textContent = new Date().getFullYear();
+const year = $('#year');
+if (year) year.textContent = new Date().getFullYear();
