@@ -8,6 +8,8 @@ window.KI_PROJECTS = [
     description: "Plataforma integral para administrar gimnasios: miembros, pagos, asistencia, analítica, reportes y avisos por WhatsApp.",
     image: "assets/projects/gymtactik-dashboard.png",
     tags: ["SaaS", "Analítica", "Automatización"],
+    metrics: ["2 gimnasios", "800+ miembros activos", "Operación 24/7"],
+    caseStudy: "caso-gymtactik.html",
     url: "https://gymtactik.com/",
     status: "En producción"
   }

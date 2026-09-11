@@ -49,7 +49,7 @@ function renderProjects() {
   projectGrid.innerHTML = projects.map((project, index) => `
     <article class="project-card" data-reveal style="--delay:${index * 80}ms">
       <a class="project-visual" href="${project.url}" target="_blank" rel="noreferrer" aria-label="Ver proyecto ${project.name}">
-        <img src="${project.image}" alt="Vista del proyecto ${project.name}" loading="lazy">
+        <img src="${project.image}" alt="Vista del proyecto ${project.name}" loading="eager" decoding="async">
         <span class="project-status"><i></i>${project.status}</span>
         ${project.logo ? `<img class="project-logo" src="${project.logo}" alt="Logo de ${project.name}">` : ''}
       </a>
@@ -57,9 +57,10 @@ function renderProjects() {
         <div class="project-meta"><span>${project.category}</span><span>${project.year}</span></div>
         <h3>${project.name}</h3>
         <p>${project.description}</p>
+        ${project.metrics ? `<ul class="project-metrics">${project.metrics.map(metric => `<li>${metric}</li>`).join('')}</ul>` : ''}
         <div class="project-footer">
           <div class="project-tags">${project.tags.map(tag => `<span>${tag}</span>`).join('')}</div>
-          <a class="round-link" href="${project.url}" target="_blank" rel="noreferrer" aria-label="Abrir ${project.name}">↗</a>
+          <a class="case-link" href="${project.caseStudy || project.url}" ${project.caseStudy ? '' : 'target="_blank" rel="noreferrer"'}>Ver caso de éxito <span>↗</span></a>
         </div>
       </div>
     </article>
@@ -84,9 +85,9 @@ const contactForm = $('#contact-form');
 contactForm?.addEventListener('submit', (event) => {
   event.preventDefault();
   const data = new FormData(contactForm);
-  const subject = encodeURIComponent(`Nuevo proyecto: ${data.get('company') || data.get('name')}`);
-  const body = encodeURIComponent(`Nombre: ${data.get('name')}\nEmpresa: ${data.get('company')}\nCorreo: ${data.get('email')}\n\nProyecto:\n${data.get('message')}`);
-  window.location.href = `mailto:kitechnologiescr@gmail.com?subject=${subject}&body=${body}`;
+  const body = encodeURIComponent(`Hola, quiero conversar sobre un proyecto con KI Technologies.\n\nNombre: ${data.get('name')}\nEmpresa: ${data.get('company') || 'No indicada'}\nCorreo: ${data.get('email')}\n\nProyecto:\n${data.get('message')}`);
+  window.open(`https://wa.me/50664218397?text=${body}`, '_blank', 'noopener,noreferrer');
 });
+
 
 $('#year').textContent = new Date().getFullYear();
