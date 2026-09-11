@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kitechnologies.com/sitemap.xml
